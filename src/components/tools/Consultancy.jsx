@@ -10,6 +10,16 @@ const Consultancy = () => {
                 <Link to="/dashboard" className="btn-back">
                     <ArrowLeft size={16} /> Voltar ao Códex
                 </Link>
+
+                <div className="sidebar-header">
+                    <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>CONSULTORIA</span>
+                </div>
+
+                <div className="mt-2">
+                    <p className="card-desc">
+                        Ferramenta de análise de mercado e logs de comércio.
+                    </p>
+                </div>
             </div>
 
             {/* Main Content - Iframe */}
