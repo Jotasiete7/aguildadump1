@@ -7,9 +7,17 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies
 node_modules
 dist-ssr
 *.local
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # Editor directories and files
 .vscode/*
@@ -21,3 +29,17 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Build output (commented out to include in repo)
+# dist
+
+# OS files
+Thumbs.db
+.AppleDouble
+.LSOverride
+
+# Cache
+.cache
+.parcel-cache
+.eslintcache
+
