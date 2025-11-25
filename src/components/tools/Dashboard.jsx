@@ -71,7 +71,7 @@ const Dashboard = () => {
                 {
                     label: 'Variação %',
                     data: top10.map(r => r[4]),
-                    backgroundColor: top10.map(r => r[5] === "▲" ? '#B00000' : r[5] === "▼" ? '#B00000' : '#B00000'),
+                    backgroundColor: top10.map(r => r[5] === "▲" ? '#00B000' : r[5] === "▼" ? '#B00000' : '#737373'),
                 },
             ],
         };
@@ -158,7 +158,7 @@ const Dashboard = () => {
                             <div key={i} className="item-card">
                                 <div className="item-header">
                                     <span className="item-name">{r[0]}</span>
-                                    <span className="item-trend trend-up">+{r[4]}%</span>
+                                    <span className="item-trend trend-up">▲ +{r[4]}%</span>
                                 </div>
                                 <div className="item-stats">
                                     <div className="stat-row">
@@ -199,10 +199,10 @@ const Dashboard = () => {
                                     <td>{row[1]}</td>
                                     <td>{formatPrice(row[2])}</td>
                                     <td>{formatPrice(row[3])}</td>
-                                    <td style={{ color: row[4] > 0 ? '#B00000' : row[4] < 0 ? '#B00000' : '#B00000' }}>
+                                    <td style={{ color: row[4] > 0 ? '#00B000' : row[4] < 0 ? '#B00000' : '#737373' }}>
                                         {row[4]}%
                                     </td>
-                                    <td style={{ color: row[5] === "▲" ? '#B00000' : row[5] === "▼" ? '#B00000' : '#B00000', fontSize: '1.2rem' }}>
+                                    <td style={{ color: row[5] === "▲" ? '#00B000' : row[5] === "▼" ? '#B00000' : '#737373', fontSize: '1.2rem' }}>
                                         {row[5]}
                                     </td>
                                     <td>{row[6]}</td>
