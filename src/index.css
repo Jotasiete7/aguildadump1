@@ -1,4 +1,4 @@
-ï»¿@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap');
 
 /* ========================================
    DESIGN SYSTEM: "Ancient Book"
@@ -6,7 +6,7 @@
 :root {
   /* Cores Principais */
   --color-bg: #0D0D0D;
-  /* CarvÃ£o Profundo */
+  /* Carvão Profundo */
   --color-text: #E0E0E0;
   /* Cinza Pergaminho */
   --color-cta: #B00000;
@@ -19,7 +19,7 @@
   --font-serif: 'Cinzel', serif;
   --font-sans: 'Inter', sans-serif;
 
-  /* EspaÃ§amentos */
+  /* Espaçamentos */
   --header-height: 80px;
   --spacing-sm: 10px;
   --spacing-md: 20px;
@@ -617,6 +617,21 @@ strong {
   color: #ccc;
 }
 
+/* CLASSES SEMÂNTICAS PARA INDICADORES */
+.indicador-positivo {
+  color: #00B000 !important;
+  font-weight: 600;
+}
+
+.indicador-negativo {
+  color: #B00000 !important;
+  font-weight: 600;
+}
+
+.destaque-primario {
+  color: #B00000;
+}
+
 .item-stats {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1127,4 +1142,19 @@ strong {
 
 .p-3 {
   padding: var(--spacing-lg);
+}
+
+/* CLASSES SEMÂNTICAS PARA INDICADORES */
+.indicador-positivo {
+  color: #00B000 !important;
+  font-weight: 600;
+}
+
+.indicador-negativo {
+  color: #B00000 !important;
+  font-weight: 600;
+}
+
+.destaque-primario {
+  color: #B00000;
 }
