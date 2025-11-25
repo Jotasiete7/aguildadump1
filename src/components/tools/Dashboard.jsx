@@ -199,10 +199,10 @@ const Dashboard = () => {
                                     <td>{row[1]}</td>
                                     <td>{formatPrice(row[2])}</td>
                                     <td>{formatPrice(row[3])}</td>
-                                    <td style={{ color: row[4] > 0 ? '#00B000' : row[4] < 0 ? '#B00000' : '#737373' }}>
+                                    <td className={row[4] > 0 ? 'indicador-positivo' : row[4] < 0 ? 'indicador-negativo' : ''}>
                                         {row[4]}%
                                     </td>
-                                    <td style={{ color: row[5] === "▲" ? '#00B000' : row[5] === "▼" ? '#B00000' : '#737373', fontSize: '1.2rem' }}>
+                                    <td className={row[5] === "▲" ? 'indicador-positivo' : row[5] === "▼" ? 'indicador-negativo' : ''} style={{ fontSize: '1.2rem' }}>
                                         {row[5]}
                                     </td>
                                     <td>{row[6]}</td>
