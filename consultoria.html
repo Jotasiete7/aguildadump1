@@ -356,7 +356,9 @@
                             if (parts.length < 4) return;
 
                             try {
-                                const date = new Date(parts[0].trim());
+                                const dateStr = parts[0].trim();
+                                const date = new Date(dateStr);
+                                if (isNaN(date.getTime())) return;
                                 const player = parts[2].trim();
                                 const msg = parts[3].trim();
                                 const productKw = profData.keywords.find(kw => lower.includes(kw)) || "Unknown";
@@ -472,7 +474,7 @@
                         }
                     }
 
-                    const day = r.date.toISOString().split('T')[0];
+                    const day = (r.date && !isNaN(r.date.getTime())) ? r.date.toISOString().split('T')[0] : new Date().toISOString().split('T')[0];
                     const t = trendsMap.get(day) || { total: 0, count: 0, vol: 0 };
                     t.vol++;
                     if (r.price && r.type === "SUPPLY") { t.total += r.price; t.count++; }
@@ -629,7 +631,9 @@
                     }
 
                     const link = document.createElement('a');
-                    link.download = `J7_Relatorio_${profile}_${new Date().toISOString().slice(0,10)}.png`;
+                    const safeDate = new Date();
+                    const dateStr = isNaN(safeDate.getTime()) ? 'export' : safeDate.toISOString().slice(0,10);
+                    link.download = `J7_Relatorio_${profile}_${dateStr}.png`;
                     link.href = canvas.toDataURL('image/png');
                     link.click();
                 } catch (err) {
